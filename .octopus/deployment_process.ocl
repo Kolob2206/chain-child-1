@@ -1,7 +1,7 @@
 step "run-a-script" {
     name = "Run a Script"
     properties = {
-        Octopus.Action.TargetRoles = "single"
+        Octopus.Action.TargetRoles = "cli"
     }
 
     action {
