@@ -35,3 +35,22 @@ step "2" {
         worker_pool_variable = ""
     }
 }
+
+step "3" {
+    name = "3"
+    properties = {
+        Octopus.Action.TargetRoles = "cli"
+    }
+
+    action {
+        action_type = "Octopus.Script"
+        properties = {
+            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.Script.ScriptBody = "write-host 'sup'"
+            Octopus.Action.Script.ScriptSource = "Inline"
+            Octopus.Action.Script.Syntax = "PowerShell"
+            OctopusUseBundledTooling = "False"
+        }
+        worker_pool_variable = ""
+    }
+}
